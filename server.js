@@ -3,6 +3,12 @@ const app = require('./src/app');
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  module.exports = app;
-});
+// Run server ONLY in local environment
+if (process.env.VERCEL !== '1') {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+// Export for Vercel serverless
+module.exports = app;
