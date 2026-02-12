@@ -1,5 +1,3 @@
-# BFHL API – Chitkara University Qualifier
-
 This project implements the BFHL REST APIs.
 
 ## APIs Implemented
